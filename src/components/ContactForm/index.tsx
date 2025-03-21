@@ -1,4 +1,6 @@
-import { Row, Col } from "antd";
+import { useState } from "react";
+import { Row, Col, message } from "antd";
+import emailjs from "@emailjs/browser";
 import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -11,7 +13,36 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange, handleSubmit } = useForm(validate);
+  const { values, errors, handleChange, validateForm, resetForm } = useForm(validate);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const validationErrors = validateForm();
+    if (Object.values(validationErrors).some((e) => e)) {
+      message.error("Please fix the errors before submitting.");
+      return;
+    }
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+        { ...values },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        message.success("Message sent successfully!");
+        resetForm();
+      })
+      .catch(() => {
+        message.error("Failed to send message.");
+      })
+      .finally(() => setLoading(false));
+  };
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
@@ -41,7 +72,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <Input
-                  type="text"
+                  type="email"
                   name="email"
                   placeholder="Your Email"
                   value={values.email || ""}
@@ -59,7 +90,9 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit" type="submit" disabled={loading}>
+                  {loading ? "Sending..." : t("Submit")}
+                </Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

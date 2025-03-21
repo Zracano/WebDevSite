@@ -1,4 +1,24 @@
 {
-  "title": "That's about it!",
-  "text": "If you are familiar with React, or SPA frameworks in general, there shouldn't be any confusing parts about this template. if not, you can always reach out to me and I'll try me best to answer your questions."
+  "title": "Choose Your Website Style",
+  "text": "Explore the different website types I offer. Each is tailored to your needs and comes packed with key features to help you succeed online.",
+  "styles": [
+    {
+      "title": "Service Business Site",
+      "features": [
+        "Home, About, Services, Contact pages",
+        "Call-to-action buttons",
+        "Mobile responsive layout",
+        "SEO-ready structure"
+      ]
+    },
+    {
+      "title": "Personal Portfolio",
+      "features": [
+        "Skills and experience section",
+        "Project showcase",
+        "Clean one-page design",
+        "Contact form or resume download"
+      ]
+    }
+  ]
 }

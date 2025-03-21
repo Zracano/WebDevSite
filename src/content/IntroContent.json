@@ -1,12 +1,12 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Modern, Fast, and Effective Websites — Built for You",
+  "text": "I create custom websites that help small businesses establish a professional online presence and attract more customers.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Let’s Work Together"
     },
     {
-      "title": "Learn more",
+      "title": "View My Services",
       "color": "#fff"
     }
   ]

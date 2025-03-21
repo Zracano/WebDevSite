@@ -1,0 +1,27 @@
+{
+    "title": "Website Demos",
+    "text": "Check out a couple of live demo layouts to see what's possible.",
+    "demos": [
+      {
+        "title": "Consulting Website",
+        "image": "/img/svg/demo1.svg",
+        "features": [
+          "Multi-section layout",
+          "Clear call-to-action",
+          "Great for service-based businesses"
+        ],
+        "link": "#"
+      },
+      {
+        "title": "Personal Portfolio",
+        "image": "/img/svg/demo2.svg",
+        "features": [
+          "One-page design",
+          "Project gallery",
+          "Ideal for freelancers and creatives"
+        ],
+        "link": "#"
+      }
+    ]
+  }
+  
