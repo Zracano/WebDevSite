@@ -8,9 +8,7 @@
 
 # Firebase cache and local emulators
 .firebase/
-.firebaserc
 firebase-debug.log
-firebase.json
 
 # dotenv environment variables (if used)
 .env
