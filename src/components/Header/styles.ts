@@ -46,10 +46,14 @@ export const Burger = styled("div")`
 `;
 
 export const NotHidden = styled("div")`
+  display: flex;
+  align-items: center;
+
   @media only screen and (max-width: 890px) {
     display: none;
   }
 `;
+
 
 export const Menu = styled("h5")`
   font-size: 1.5rem;
@@ -93,6 +97,7 @@ export const Span = styled("span")`
     text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
+
 
 export const LanguageSelectorWrapper = styled.div`
   display: flex;

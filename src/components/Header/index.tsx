@@ -76,7 +76,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
-          <NotHidden style={{ display: "flex", alignItems: "center" }}>
+          <NotHidden>
             <MenuItem />
             <LanguageSelector />
           </NotHidden>
