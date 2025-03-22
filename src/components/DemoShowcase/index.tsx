@@ -36,7 +36,7 @@ const DemoShowcase = ({ content, t }: DemoShowcaseProps & { t: any }) => {
                   cover={<DemoImage src={demo.image} alt={demo.title} />}
                   actions={[
                     <Button type="primary" href={demo.link} target="_blank">
-                      View Demo
+                      {t("View Demo")}
                     </Button>
                   ]}
                 >
