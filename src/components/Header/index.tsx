@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
-import { withTranslation, TFunction } from "react-i18next";
+import { withTranslation, TFunction, useTranslation } from "react-i18next";
+import i18n from "i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
@@ -14,6 +15,7 @@ import {
   Label,
   Outline,
   Span,
+  LanguageSelectorWrapper,
 } from "./styles";
 
 const Header = ({ t }: { t: TFunction }) => {
@@ -53,15 +55,30 @@ const Header = ({ t }: { t: TFunction }) => {
     </>
   );
 
+  const LanguageSelector = () => (
+    <LanguageSelectorWrapper>
+      <span className="label">{t("Language")}:</span>
+      <span className="flag" onClick={() => i18n.changeLanguage("en")}>
+        <SvgIcon src="united-states.svg" width="24px" height="24px" />
+      </span>
+      <span className="flag" onClick={() => i18n.changeLanguage("es")}>
+        <SvgIcon src="spain.svg" width="24px" height="24px" />
+      </span>
+    </LanguageSelectorWrapper>
+  );
+  
+  
+
   return (
     <HeaderSection>
       <Container>
-        <Row justify="space-between">
+        <Row justify="space-between" align="middle" style={{ width: "100%" }}>
           <LogoContainer to="/" aria-label="homepage">
             <SvgIcon src="logo.svg" width="101px" height="64px" />
           </LogoContainer>
-          <NotHidden>
+          <NotHidden style={{ display: "flex", alignItems: "center" }}>
             <MenuItem />
+            <LanguageSelector />
           </NotHidden>
           <Burger onClick={toggleButton}>
             <Outline />
@@ -79,7 +96,11 @@ const Header = ({ t }: { t: TFunction }) => {
             </Label>
           </Col>
           <MenuItem />
+          <div style={{ padding: "1rem 1.5rem" }}>
+            <LanguageSelector />
+          </div>
         </Drawer>
+
       </Container>
     </HeaderSection>
   );

@@ -93,3 +93,34 @@ export const Span = styled("span")`
     text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
+
+export const LanguageSelectorWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #18216d;
+
+  .label {
+    cursor: default;
+  }
+
+  .flag {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+`;
+
