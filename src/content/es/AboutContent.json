@@ -1,0 +1,16 @@
+{
+  "title": "Rápido, limpio y responsivo",
+  "text": "Cada sitio web está diseñado para funcionar perfectamente en computadoras, tablets y celulares.",
+  "section": [
+    {
+      "title": "Desarrollo profesional",
+      "content": "Utilizo herramientas modernas como React, TypeScript y Firebase para garantizar rendimiento y seguridad.",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Diseño personalizado",
+      "content": "Diseños únicos adaptados a la imagen y necesidades de tu negocio.",
+      "icon": "product-launch.svg"
+    }
+  ]
+}

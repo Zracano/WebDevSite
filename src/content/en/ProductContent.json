@@ -1,0 +1,24 @@
+{
+  "title": "Choose Your Website Style",
+  "text": "Explore the different website types I offer. Each is tailored to your needs and comes packed with key features to help you succeed online.",
+  "styles": [
+    {
+      "title": "Service Business Site",
+      "features": [
+        "Home, About, Services, Contact pages",
+        "Call-to-action buttons",
+        "Mobile responsive layout",
+        "SEO-ready structure"
+      ]
+    },
+    {
+      "title": "Personal Portfolio",
+      "features": [
+        "Skills and experience section",
+        "Project showcase",
+        "Clean one-page design",
+        "Contact form or resume download"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "title": "Planes simples y claros",
+  "text": "Sin complicaciones. Elige un plan con precio fijo. Todos incluyen hosting, diseño, y soporte técnico.",
+  "styles": [
+    {
+      "title": "Sitio Personalizado",
+      "features": [
+        "Diseño responsivo",
+        "Formulario de contacto",
+        "Integración con redes sociales",
+        "Soporte por email"
+      ]
+    },
+    {
+      "title": "Sitio de Servicios",
+      "features": [
+        "Agenda o calendario integrado",
+        "Galería o portafolio",
+        "Google Maps",
+        "Soporte prioritario"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Demos de sitios web",
+  "text": "Explora un par de diseños en vivo para ver lo que es posible.",
+  "demos": [
+    {
+      "title": "Sitio de Consultoría",
+      "image": "/img/svg/demo1.svg",
+      "features": [
+        "Diseño de varias secciones",
+        "Llamado a la acción claro",
+        "Ideal para negocios de servicios"
+      ],
+      "link": "#"
+    },
+    {
+      "title": "Portafolio Personal",
+      "image": "/img/svg/demo2.svg",
+      "features": [
+        "Diseño de una sola página",
+        "Galería de proyectos",
+        "Perfecto para freelancers y creativos"
+      ],
+      "link": "#"
+    }
+  ]
+}
